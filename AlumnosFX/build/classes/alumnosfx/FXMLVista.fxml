@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="582.0" prefWidth="438.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="alumnosfx.FXMLVistaController">
+    <children>
+      <VBox alignment="CENTER" prefHeight="582.0" prefWidth="438.0" style="-fx-background-color: #4fa8fb;">
+         <children>
+              <Button fx:id="button" onAction="#mostrarGrafico" text="Matriculados en DI">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#salir" text="Salir">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="29.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="90.0" prefWidth="438.0" style="-fx-background-color: #20c67a;">
+         <children>
+              <Label fx:id="label" minHeight="16" minWidth="69" text="Generador de informes">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

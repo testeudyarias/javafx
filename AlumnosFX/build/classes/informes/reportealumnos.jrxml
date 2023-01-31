@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" uuid="d67e5a99-8ed6-4b4e-aa92-942bfa43a537">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="alumno" scriptletClass="alumno" resourceBundle="alumno" whenResourceMissingType="Empty" uuid="fea0d1c6-8990-44d0-ad0c-c607c743eaee">
+		<field name="dni" class="java.lang.String"/>
+		<field name="siglaModuloMatriculado" class="java.lang.String"/>
+		<field name="nota" class="java.lang.Object"/>
+		<field name="provincia" class="java.lang.String"/>
+		<filterExpression><![CDATA[]]></filterExpression>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dni" class="java.lang.String"/>
+	<field name="siglaModuloMatriculado" class="java.lang.String"/>
+	<field name="nota" class="java.lang.Object"/>
+	<field name="provincia" class="java.lang.String"/>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="24" width="545" height="30" forecolor="#CC1F1D" uuid="0312c401-c9ab-451f-b820-308fd3933260"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matriculados en DI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="27">
+			<staticText>
+				<reportElement x="0" y="0" width="138" height="20" uuid="342ec9c4-8ffa-4ca4-b8d6-e15beb6ec430"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="0" width="138" height="20" uuid="dc6a5fdf-cf38-4486-a69b-9d150ccd1d27"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sigla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="0" width="138" height="20" uuid="2cc4106e-db7d-403a-a5fb-e7517b126747"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="20" uuid="c11928f5-b282-42e2-894b-e29f66e7fdd2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provincia]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="550" height="1" uuid="711d082b-9e8e-431e-b552-3d447eb8433c"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="138" height="20" uuid="2aa377c3-2dd9-4c4a-9b6a-c4fd726a28cf"/>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="138" y="0" width="138" height="20" uuid="b7883fba-eab8-4afd-b48a-c375d98f7fd9"/>
+				<textFieldExpression><![CDATA[$F{siglaModuloMatriculado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="0" width="138" height="20" uuid="7ac76821-ea0f-4f8a-95e5-bf387347d5a4"/>
+				<textFieldExpression><![CDATA[""+$F{nota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="7e9038be-78a0-4a8c-9e6f-e1adac475831"/>
+				<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="24">
+			<textField>
+				<reportElement x="310" y="0" width="242" height="20" uuid="dd4f6edd-09c5-44cd-af49-2f34c44b1b15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Total alumnos matriculados en DI "+$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>
